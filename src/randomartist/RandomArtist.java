@@ -14,11 +14,11 @@ public class RandomArtist {
         SwingUtilities.invokeLater(new Runnable(){
         @Override
             public void run(){
-                cara = new Cara();
-                frame = new JFrame("Computer Assisted Random Artist");
+                cara = new Cara();                                              //creating the panel
+                frame = new JFrame("Computer Assisted Random Artist");          //creating the frame header
                 frame.add(cara, BorderLayout.CENTER);
-                button = new JButton("regenerate");
-                button.addActionListener(cara);
+                button = new JButton("regenerate");                             //regenerate button
+                button.addActionListener(cara);                                 //Action listener of button
                 frame.add(button, BorderLayout.SOUTH);
                 frame.pack();
                 cara.regenerate();
