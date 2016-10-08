@@ -3,13 +3,13 @@ package randomartist;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
+import java.util.List;
 import javax.swing.*;
-import java.util.ArrayList;
         
 
 public class Cara extends JPanel implements ActionListener{
     Random random = new Random();
-    priavte List<RandomShape> shapes;
+    private List<RandomShape> shapeList;
     
     public Cara(){                                  //Creating the dimensions
         setPreferredSize(new Dimension(400, 300));  //of the panel
@@ -17,10 +17,11 @@ public class Cara extends JPanel implements ActionListener{
     }
     
     @Override
-    protected void paintComponent(Graphics g){
+    protected void paintComponent(Graphics g, int n){
         super.paintComponent(g);                    //Clears the background
-        for (int i = 0; i < shapeList.size(); i++) {//loop that will generate shapes by calling each functions
-            
+        if  (n < shapeList.size()){
+            shapeList.get(n).actionPerformed(n);
+            paintComponent(g, n+1);  
         }
            
         
@@ -35,6 +36,7 @@ public class Cara extends JPanel implements ActionListener{
     public void regenerate(){
                                         //clear the shapes list
                                         //create new random shapes
+                                        //should call method draw and RandomShape from the separate class
     }
 
 

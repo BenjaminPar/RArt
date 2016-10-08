@@ -7,13 +7,6 @@ import java.awt.Graphics;
 abstract class RandomShape extends Cara{
     static Random randomD = new Random();   //randomizer for dimensions
 
-    public RandomShape() {
-        
-    }
-    
-    
-    
-    
     
     
     
@@ -24,7 +17,7 @@ abstract class RandomShape extends Cara{
     public RandomShape(int maxX, int maxY){
         x = randomD.nextInt(maxX);
         y = randomD.nextInt(maxY);
-                                        //initialize to a random color
+        color = randomD.;                                //initialize to a random color
         
         
         
@@ -33,4 +26,4 @@ abstract class RandomShape extends Cara{
     abstract void draw(Graphics g);
         
         
-}
+   }
