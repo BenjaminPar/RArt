@@ -9,18 +9,18 @@ import java.util.ArrayList;
 
 public class Cara extends JPanel implements ActionListener{
     Random random = new Random();
-    ArrayList shapeList = new ArrayList();
+    priavte List<RandomShape> shapes;
     
-    public Cara(){
-        setPreferredSize(new Dimension(400, 300));
+    public Cara(){                                  //Creating the dimensions
+        setPreferredSize(new Dimension(400, 300));  //of the panel
         
     }
     
     @Override
     protected void paintComponent(Graphics g){
         super.paintComponent(g);                    //Clears the background
-        for (int i = 0; i < shapeList.size(); i++) {
-            actionPerformed();
+        for (int i = 0; i < shapeList.size(); i++) {//loop that will generate shapes by calling each functions
+            
         }
            
         

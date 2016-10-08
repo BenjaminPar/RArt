@@ -3,11 +3,14 @@ package randomartist;
 import java.util.Random;
 import java.awt.Color;
 import java.awt.Graphics;
-import java.util.ArrayList;
 
 abstract class RandomShape extends Cara{
-    static Random randomD = new Random();
-    ArrayList shapeList = new ArrayList();
+    static Random randomD = new Random();   //randomizer for dimensions
+
+    public RandomShape() {
+        
+    }
+    
     
     
     
