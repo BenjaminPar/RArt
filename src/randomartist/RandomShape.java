@@ -7,23 +7,23 @@ import java.awt.Graphics;
 abstract class RandomShape extends Cara{
     static Random randomD = new Random();   //randomizer for dimensions
 
+    protected Color color;                  //color used for the shape
     
-    
-    
-    protected Color color;              //color used for the shape
-    
-    protected int x, y;                 //position of shape
+    protected int x, y;                     //position of shape
     
     public RandomShape(int maxX, int maxY){
         x = randomD.nextInt(maxX);
         y = randomD.nextInt(maxY);
-        color = randomD.;                                //initialize to a random color
+        color = randomD. ;                                //initialize to a random color
         
         
         
     }
     
     abstract void draw(Graphics g);
+        this.RandomShape(this.color, this.maxX, this.maxY, <random> );
         
+    }
+.
         
    }

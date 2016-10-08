@@ -17,10 +17,10 @@ class RandomSquare extends RandomShape {
     void draw(Graphics g) {
         g.setColor(color);
         if(fill){
-            g.fillRect(x, y, maxX, maxY);
+            g.fillRect(x, y, lineLength, lineLength);
         }
         else{
-            g.drawRect(x, y, maxX, maxY);
+            g.drawRect(x, y, lineLength, lineLength);
         }
         
     }
