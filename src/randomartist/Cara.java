@@ -4,42 +4,38 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
 import javax.swing.*;
-import java.awt.Graphics2D; 
+
 
 
 public class Cara extends JPanel implements ActionListener{
-    static Random random = new Random();
+    
     
     
     ArrayList shapeList = new ArrayList();                //Adding the different shape classes
     
     
     
-    public Cara(){                                        //Creating the dimensions                                 
-                                                          //of the panel
-        setPreferredSize(new Dimension(400, 300));    
+    public Cara(){                                        //Creating the dimensions
+        setPreferredSize(new Dimension(400, 300));        //of the panel
     }
     
     
     protected void paintComponent(Graphics g, int n){
         super.paintComponent(g);                    //Clears the background
-        Graphics2D g2 = (Graphics2D) g;
         for(int i = 0; i < n; i++){
-            //g2.draw(shapeList<i>);
+            add(new RandomShape());
         }
            
         
     }
 
-    @Override
+
     public void actionPerformed(ActionEvent e){
-        int n = random.nextInt(2);                      //random int is generated which will
-        switch(n){                                      //set the number of shapes generated once
-            case 0: RandomCircle;                      //regerenate button is pressed
-            case 1: RandomSquare;
-            
-            
-        }
+        //int n = random.nextInt(2);                      //random int is generated which will
+        //switch(n){                                      //set the number of shapes generated once
+        //    case 0: RandomCircle;                      //regerenate button is pressed
+        //    case 1: RandomSquare;
+        //}
         
         
         

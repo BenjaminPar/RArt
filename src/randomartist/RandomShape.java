@@ -1,10 +1,13 @@
 package randomartist;
 
-import java.util.Random;
 import java.awt.Color;
 import java.awt.Graphics;
+import java.util.Random;
 
-abstract class RandomShape extends Cara{
+abstract class RandomShape{
+    
+    static Random random = new Random();
+
                                             //randomizer for dimensions
     protected Color color;                  //color used for the shape
     int r = random.nextInt(255);
@@ -18,7 +21,7 @@ abstract class RandomShape extends Cara{
         y = random.nextInt(maxY);
         color = new Color(r,g,b);           //initialize to a random color   
     }
-    
+   
         abstract public void draw(Graphics g);   
 }
 
