@@ -1,16 +1,19 @@
 package randomartist;
 
 import java.awt.Graphics;
-
+import java.util.Random;
 
 class RandomCircle extends RandomShape {
     protected int radius;
     protected boolean fill;
     
+    Random randomC = new Random();
+    
+    
     public RandomCircle (int maxX, int maxY){
         super(maxX, maxY);
-        radius = random.nextInt(maxX/4);
-        fill = random.nextBoolean();
+        radius = randomC.nextInt(maxX/4);
+        fill = randomC.nextBoolean();
     }
 
     @Override

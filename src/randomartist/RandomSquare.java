@@ -1,17 +1,19 @@
 package randomartist;
 
 import java.awt.Graphics;
-
+import java.util.Random;
 
 class RandomSquare extends RandomShape {
     protected int lineLength;
     protected boolean fill;
     
+    Random randomS = new Random();
     
-    public randomSquare (int maxX, int maxY) {
+    
+    public RandomSquare (int maxX, int maxY) {
         super(maxX, maxY);
-        lineLength = random.nextInt(maxX);
-        fill = random.nextBoolean();
+        lineLength = randomS.nextInt(maxX);
+        fill = randomS.nextBoolean();
     }
     
     void draw(Graphics g) {
