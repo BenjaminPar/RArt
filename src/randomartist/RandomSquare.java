@@ -7,16 +7,15 @@ class RandomSquare extends RandomShape {
     protected int lineLength;
     protected boolean fill;
     
-    Random randomS = new Random();
-    
     
     public RandomSquare (int maxX, int maxY) {
         super(maxX, maxY);
-        lineLength = randomS.nextInt(maxX);
-        fill = randomS.nextBoolean();
+        lineLength = random.nextInt(maxX);
+        fill = random.nextBoolean();
     }
     
-    void draw(Graphics g) {
+    @Override
+    public void draw(Graphics g) {
         g.setColor(color);
         if(fill){
             g.fillRect(x, y, lineLength, lineLength);

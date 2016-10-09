@@ -23,7 +23,7 @@ public class RandomArtist {
                 frame.pack();
                 cara.regenerate();
                 frame.setVisible(true);
-            }
+            }  
         });
     }
     
