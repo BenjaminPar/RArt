@@ -1,7 +1,6 @@
 package randomartist;
 
 import java.awt.Graphics;
-import java.util.Random;
 
 class RandomSquare extends RandomShape {
     protected int lineLength;
