@@ -22,7 +22,7 @@ abstract class RandomShape{
         color = new Color(r,g,b);           //initialize to a random color   
     }
    
-        abstract public void draw(Graphics g);   
+    abstract public void draw(Graphics g);   
 }
 
         

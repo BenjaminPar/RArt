@@ -5,17 +5,9 @@ import java.awt.event.*;
 import java.util.*;
 import javax.swing.*;
 
-
-
-
-
 public class Cara extends JPanel implements ActionListener{
     
-    
-    
     private static ArrayList<RandomShape> shapeList;                //Adding the different shape classes
-    boolean toggle = true;
-    
     
     public Cara(){                                        //Creating the dimensions
         setPreferredSize(new Dimension(400, 300));        //of the panel
@@ -49,18 +41,18 @@ public class Cara extends JPanel implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e){
-        if(toggle){
-            
+        if(e.equals(true)){
+            regenerate();
         }
-        
     }
     
     public void regenerate(){
-        
+        paintComponent();
     }
     
     public void repaint(){              //regenerates a new colour by calling RandomShape
-    
+        
     }
+
 
 }
