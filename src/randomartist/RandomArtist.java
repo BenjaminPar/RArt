@@ -20,6 +20,7 @@ public class RandomArtist {
                 button = new JButton("regenerate");                             //regenerate button
                 button.addActionListener(cara);                                 //Action listener of button
                 frame.add(button, BorderLayout.SOUTH);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame.pack();
                 cara.regenerate();
                 frame.setVisible(true);

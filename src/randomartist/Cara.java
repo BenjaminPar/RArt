@@ -7,46 +7,56 @@ import javax.swing.*;
 
 
 
+
+
 public class Cara extends JPanel implements ActionListener{
     
     
     
-    ArrayList shapeList = new ArrayList();                //Adding the different shape classes
-    
+    private static ArrayList<RandomShape> shapeList;                //Adding the different shape classes
+    boolean toggle = true;
     
     
     public Cara(){                                        //Creating the dimensions
         setPreferredSize(new Dimension(400, 300));        //of the panel
+        shapeList = new ArrayList<RandomShape>();
     }
     
     
     protected void paintComponent(Graphics g, int n){
-        super.paintComponent(g);                    //Clears the background
-        for(int i = 0; i < n; i++){
-            add(new RandomShape());
+        shapeList.clear();                      //clear the initaly created shapes
+        Random number = new Random();
+        
+        
+        RandomShape shape = null;
+        int generatedShape;
+        
+        for (int i = 0; i < shapeList.size(); i++) {
+            generatedShape = number.nextInt(shapeList.size());
+            
+            switch (generatedShape){
+                case 0: shape = new RandomCircle(300,400);
+                break;
+            
+                case 1: shape = new RandomSquare(300, 400);
+                break;
+            
+            }                    
         }
            
         
     }
 
-
+    @Override
     public void actionPerformed(ActionEvent e){
-        //int n = random.nextInt(2);                      //random int is generated which will
-        //switch(n){                                      //set the number of shapes generated once
-        //    case 0: RandomCircle;                      //regerenate button is pressed
-        //    case 1: RandomSquare;
-        //}
+        if(toggle){
+            
+        }
         
-        
-        
-        regenerate();
-        repaint();
     }
     
     public void regenerate(){
-        //this.paintComponent(g, WIDTH);                               //clear the shapes list
-                                        //create new random shapes
-                                       //should call method draw and RandomShape from the separate class
+        
     }
     
     public void repaint(){              //regenerates a new colour by calling RandomShape
